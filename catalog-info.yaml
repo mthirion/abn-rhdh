@@ -93,7 +93,6 @@ kind: Domain
 metadata:
   name: sample-domain
   description: Sample domain which has stuff for demoing.
-spec:{}
 
 ---
 apiVersion: backstage.io/v1alpha1
