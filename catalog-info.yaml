@@ -106,3 +106,4 @@ metadata:
   description: Sample things which are good for demoing.
 spec:
   domain: sample-domain
+  owner: roadio
