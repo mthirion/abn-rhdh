@@ -18,8 +18,6 @@ metadata:
     - demo
   annotations:
     github.com/project-slug: RoadieHQ/sample-service
-    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
-    sentry.io/project-slug: sample-service
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
     backstage.io/techdocs-ref: dir:.
     pagerduty.com/service-id: PZDAG59
@@ -47,20 +45,6 @@ spec:
     - sample-service
   dependsOn:
     - Resource:sample-s3-bucket
-
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  title: Sentry JS
-  name: sentry-js
-  description: A JS client which communicates with the Sentry HTTP API.
-spec:
-  type: library
-  owner: team-alpha
-  lifecycle: production
-  system: sample-system
-  subcomponentOf: sample-service
 
 ---
 apiVersion: backstage.io/v1alpha1
