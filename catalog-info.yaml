@@ -95,6 +95,7 @@ metadata:
   description: Sample domain which has stuff for demoing.
 spec:
   type: corporate-domain
+  owner: roadio
   
 ---
 apiVersion: backstage.io/v1alpha1
