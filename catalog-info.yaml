@@ -37,7 +37,6 @@ metadata:
     endoflife.date/products: nodejs
 spec:
   type: service
-  owner: group:roadiehq/engineering
   lifecycle: production
   system: sample-system
   custom:
