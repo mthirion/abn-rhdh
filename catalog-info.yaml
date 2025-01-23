@@ -58,7 +58,6 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: group:roadiehq/marketing
   system: sample-system
   subcomponentOf: sample-service
 
@@ -74,7 +73,6 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:roadiehq/engineering
   system: sample-system
   definition:
     $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
@@ -95,8 +93,7 @@ kind: Domain
 metadata:
   name: sample-domain
   description: Sample domain which has stuff for demoing.
-spec:
-  owner: group:roadiehq/engineering
+spec:{}
 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -106,5 +103,4 @@ metadata:
   name: sample-system
   description: Sample things which are good for demoing.
 spec:
-  owner: group:roadiehq/engineering
   domain: sample-domain
