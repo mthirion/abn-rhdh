@@ -106,3 +106,6 @@ kind: System
 metadata:
   title: Sample System
   name: sample-system
+spec:
+  domain: sample-domain
+  owner: roadio
