@@ -17,7 +17,7 @@ metadata:
     - js
     - demo
   annotations:
-    backstage.io/source-location: https://github.com/RoadieHQ/sample-service
+    backstage.io/source-location: url:https://github.com
     github.com/project-slug: RoadieHQ/sample-service
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
     backstage.io/techdocs-ref: dir:.
