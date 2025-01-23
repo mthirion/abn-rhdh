@@ -38,6 +38,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
+  owner: team-alpha
   system: sample-system
   custom:
     em: user:dtuite
@@ -56,6 +57,7 @@ metadata:
   description: A JS client which communicates with the Sentry HTTP API.
 spec:
   type: library
+  owner: team-alpha
   lifecycle: production
   system: sample-system
   subcomponentOf: sample-service
@@ -71,6 +73,7 @@ metadata:
     - unstable
 spec:
   type: openapi
+  owner: team-delta
   lifecycle: production
   system: sample-system
   definition:
@@ -83,7 +86,7 @@ metadata:
   description: The s3 bucket with the sample data in it. Doesn't really exist.
 spec:
   type: s3-bucket
-  owner: team-alpha
+  owner: team-beta
   system: sample-system
 
 ---
