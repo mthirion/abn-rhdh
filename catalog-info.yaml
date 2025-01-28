@@ -20,7 +20,7 @@ metadata:
     backstage.io/source-location: url:https://github.com/RoadieHQ/sample-service
     github.com/project-slug: RoadieHQ/sample-service
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
-    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/repo/tree/main
+    backstage.io/techdocs-ref: url:https://github.com/mthirion/abn-rhdh
     pagerduty.com/service-id: PZDAG59
     backstage.io/kubernetes-id: sample-service
     travis-ci.com/repo-slug: RoadieHQ/sample-service
