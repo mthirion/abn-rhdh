@@ -6,14 +6,11 @@ metadata:
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
-  labels:
-    tier: "3"
   tags:
     - js
     - demo
   annotations:
     backstage.io/source-location: url:https://github.com/RoadieHQ/sample-service
-    github.com/project-slug: RoadieHQ/sample-service
     backstage.io/kubernetes-id: sample-service
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
 spec:
@@ -21,9 +18,6 @@ spec:
   lifecycle: qualification
   owner: user1
   system: sample-system
-  custom:
-    em: user:dtuite
-    product: user:samnixon87
   providesApis:
     - sample-service
   dependsOn:
