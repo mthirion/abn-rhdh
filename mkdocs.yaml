@@ -1,4 +1,7 @@
-site_name: 'Backstage Demo'
+site_name: 'ABN Amro Demo'
 
+nav:
+  - Home: index.md
+  
 plugins:
   - techdocs-core
