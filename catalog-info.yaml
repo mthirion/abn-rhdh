@@ -2,41 +2,24 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: sample-service
-  title: Sample Service
+  title: Sample JS Service
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
   labels:
     tier: "3"
-  links:
-    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
-      title: Datadog
-      icon: dashboard
   tags:
-    - test
     - js
     - demo
   annotations:
-    backstage.io/source-location: url:https://github.com/RoadieHQ/sample-servic
+    backstage.io/source-location: url:https://github.com/RoadieHQ/sample-service
     github.com/project-slug: RoadieHQ/sample-service
-    cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
-    backstage.io/techdocs-ref: url:https://gitlab-gitlab.apps.cluster-qcv5w.qcv5w.sandbox466.opentlc.com/development/my-quarkus-app
-    pagerduty.com/service-id: PZDAG59
     backstage.io/kubernetes-id: sample-service
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
-    opsgenie.com/component-selector: sample-service-1
-    qameta.io/allure-project: value
-    newrelic.com/dashboard-guid: 'MzcwMjEwN3xWSVp8REFTSEJPQVJEfGRhOjkwMDk4'
-    sonarqube.org/project-key: RoadieHQ_sample-service
-    datadoghq.com/tag-name: sample-service
-    datadoghq.com/slo_tag: service:sample-service
-    datadoghq.com/monitor_tags: sample-service
-    backstage.io/code-coverage: enabled
-    endoflife.date/products: nodejs
 spec:
   type: service
-  lifecycle: production
-  owner: team-alpha
+  lifecycle: qualification
+  owner: user1
   system: sample-system
   custom:
     em: user:dtuite
@@ -45,6 +28,7 @@ spec:
     - sample-service
   dependsOn:
     - Resource:sample-s3-bucket
+    - Resource:sample-database
 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -57,8 +41,8 @@ metadata:
     - unstable
 spec:
   type: openapi
-  owner: team-delta
-  lifecycle: production
+  owner: user1
+  lifecycle: qualification
   system: sample-system
   definition:
     $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
@@ -71,9 +55,20 @@ metadata:
   description: The s3 bucket with the sample data in it. Doesn't really exist.
 spec:
   type: s3-bucket
-  owner: team-beta
+  owner: user1
   system: sample-system
 
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: sample-database
+  description: The database used by the service
+spec:
+  type: database
+  owner: user1
+  system: sample-system
+  
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Domain
@@ -82,7 +77,7 @@ metadata:
   description: Sample domain which has stuff for demoing.
 spec:
   type: corporate-domain
-  owner: roadio
+  owner: user1
   
 ---
 apiVersion: backstage.io/v1alpha1
@@ -92,5 +87,5 @@ metadata:
   name: sample-system
 spec:
   domain: sample-domain
-  owner: roadio
+  owner: user1
    
