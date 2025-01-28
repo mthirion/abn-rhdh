@@ -38,7 +38,7 @@ metadata:
   name: sample-service
   description: The Sample Service API allows you to send errors to Rollbar or Sentry.
   tags:
-    - unstable
+    - stable
 spec:
   type: openapi
   owner: user1
