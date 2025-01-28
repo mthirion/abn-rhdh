@@ -1,7 +1,0 @@
-site_name: 'ABN Amro Demo'
-
-nav:
-  - Onboarding on Openshift: onboard-openshift.md
-  
-plugins:
-  - techdocs-core
