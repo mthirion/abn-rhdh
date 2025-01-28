@@ -1,34 +1,4 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: sample-service2
-  title: New JS Service
-  description: |
-    A service for testing Backstage functionality. Configured for GitHub Actions and
-    Sentry.
-  labels:
-    tier: "3"
-  tags:
-    - js
-    - demo
-  annotations:
-    backstage.io/source-location: url:https://github.com/RoadieHQ/sample-service
-    github.com/project-slug: RoadieHQ/sample-service
-    backstage.io/kubernetes-id: sample-service
-    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=sample-service'
-spec:
-  type: service
-  lifecycle: qualification
-  owner: user2
-  system: sample-system
-  custom:
-    em: user:dtuite
-    product: user:samnixon87
-  providesApis:
-    - new-api
-
----
-apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   title: New Service API
@@ -43,25 +13,3 @@ spec:
   system: sample-system
   definition:
     $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
-
-  
----
-apiVersion: backstage.io/v1alpha1
-kind: Domain
-metadata:
-  name: sample-domain
-  description: Sample domain which has stuff for demoing.
-spec:
-  type: corporate-domain
-  owner: user1
-  
----
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  title: Sample System
-  name: sample-system
-spec:
-  domain: sample-domain
-  owner: user1
-   
